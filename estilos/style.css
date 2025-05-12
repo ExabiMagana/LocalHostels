@@ -1,9 +1,125 @@
+/*Estas son algo así como variables, están aquí para que no tengan que estar copiando los códigos de color
+para usarlas solo deben escribir var(--nombreVariable)*/
+:root{
+    --background-principal: linear-gradient(to bottom, #272727, #0d0d0d, #272727);
+    --background-secundario: linear-gradient(to top, #767891, #8096c7);
+    --verde: #0fbea1;
+    --azul: #133a59;
+    --amarillo: #d4af37;
+    --amarillo2: #b38e2e;
+    --negro: #0d0d0d;
+    --gris1: #333;
+    --gris2: #929292;
+    --gris3: #444;
+    --gris4: #555;
+    --blanco: #fff;
+}
+
 /* General */
 body {
     margin: 0;
     font-family: 'Georgia', serif;
-    background: linear-gradient(to bottom,rgb(39, 39, 39),#0d0d0d,rgb(39, 39, 39));
-    color: #d4af37;
+    background: var(--background-principal);
+    color: var(--amarillo);
+}
+
+/*Modo Claro*/
+.float{
+    z-index: 10;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.float:hover{
+    background: var(--negro);
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
+}
+
+.light .float{
+    background: var(--negro);
+    color: var(--blanco);
+}
+.light .float:hover{
+    background: var(--blanco);
+    color: var(--negro);
+}
+.light {
+    background: var(--background-secundario);
+}
+.light .hotel{
+    background-color: var(--azul);
+    border-color: var(--verde);
+}
+.light .flip-card{
+    background-color: var(--azul)
+}
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6{
+    color: var(--verde);
+}
+.light header, .light footer, .light .flip-text, .light hr, .light .encabezado{
+    background: var(--azul);
+    border-color: var(--verde);
+}
+.light .nav a{
+    color: var(--verde);
+}
+.light .flip-card, .light .hotel, .light .botones div{
+    color: var(--verde);
+    border-color: var(--verde);
+}
+.light .flip-back a:hover{
+    background: var(--verde);
+}
+.light .btn, .light .botones button, .light .back-button, .light .comments{
+    background-color: var(--azul);
+    color: var(--verde);
+    border: 1px solid var(--verde);
+}
+.light .btn:hover, .light .back-button:hover{
+    background-color: var(--verde);
+    border: 1px solid var(--azul);
+    color: var(--azul);
+
+}
+.light .botones button:hover{
+    background-color: var(--verde);
+}
+.light .rating{
+    color: var(--verde);
+}
+.light .services ul li{
+    background: var(--azul);
+    color: var(--verde);
+    border-color: var(--verde);
+}
+.light .gallery img, .light .map{
+    border-color: var(--verde);
+    color: var(--verde);
+}
+.light form input, .light form textarea{
+    border-color: var(--azul);
+    color: var(--azul);
+} 
+
+.light form input::placeholder,
+.light form textarea::placeholder {
+    color: var(--blanco);
+}
+
+.light .bloque-letra {
+  background-color: var(--gris2);
+}
+
+.light .bloque-letra a, .light .indice-servicios a{
+  background-color: var(--blanco);
+  color: var(--negro);
 }
 
 /* Header */
@@ -12,19 +128,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 50px;
-    background-color: #0d0d0d;
-    border-bottom: 1px solid #d4af37;
+    background-color: var(--negro);
+    border-bottom: 1px solid var(--amarillo);
 }
 
 .nav a {
-    color: #d4af37;
+    color: var(--amarillo);
     margin-left: 30px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav a:hover {
-    color: #fff;
+    color: var(--blanco);
 }
 
 .logo img {
@@ -36,13 +152,14 @@ body {
 /* Hero Section */
 .hero {
     background: url('../recursos/imagenes/portadaHotel.jpg') no-repeat center center/cover;
-    background-color: #333;
+    background-color: var(--gris1);
     text-align: center;
     padding: 150px 20px;
 }
 
 .hero h1 {
     font-size: 64px;
+    text-shadow: 1px 1px 1px white;
     margin: 0;
 }
 
@@ -55,17 +172,17 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
-    color: #d4af37;
-    background-color: #0d0d0d;
-    border: 1px solid #d4af37;
+    color: var(--amarillo);
+    background-color: var(--negro);
+    border: 1px solid var(--amarillo);
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover {
-    background-color: #d4af37;
-    color: #0d0d0d;
+    background-color: var(--amarillo);
+    color: var(--negro);
 }
 .botones {
     margin-top: 30px;
@@ -78,8 +195,8 @@ body {
 .botones > div {
     display: flex;
     align-items: center;
-    background-color: white;
-    border: 1px solid #b38e2e;
+    background-color: var(--blanco);
+    border: 1px solid var(--amarillo2);
     border-radius: 30px;
     overflow: hidden;
     width: 300px;
@@ -96,22 +213,30 @@ body {
 }
 
 .botones > div button {
-    background-color: #d4af37;
+    background-color: var(--amarillo);
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease;
     height: 100%;
-    border-left: 1px solid #d4af37; 
+    border-left: 1px solid var(--amarillo); 
 }
 
 .botones > div button:hover {
-    background-color: #b38e2e;
-    color: white;
+    background-color: var(--amarillo2);
+    color: var(--blanco);
 }
 
 /* Targetas */
+hr{
+    margin: 20px 0 40px 0;
+    background-color: var(--amarillo);
+    opacity: 40%;
+    border: 0;
+    height: 50px;
+}
+
 .cards {
     display: flex;
     justify-content: center;
@@ -132,7 +257,7 @@ body {
     height: 220px;
     overflow: hidden;
     border-radius: 10px;
-    border: 1px solid #d4af37;
+    border: 1px solid var(--amarillo);
     cursor: pointer;
 }
 
@@ -155,21 +280,21 @@ body {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: black;
+    background-color: var(--negro);
     z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: white;
+    color: var(--blanco);
     pointer-events: none;
 }
 .overlay-text {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: var(--negro);
+    color: var(--blanco);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
@@ -181,7 +306,7 @@ body {
     top: 0;
     left: 0;
     background-color: rgb(39, 39, 39);
-    color: white;
+    color: var(--blanco);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -195,16 +320,16 @@ body {
 .flip-back a {
     text-decoration: none;
     margin-top: 15px;
-    background-color: white;
+    background-color: var(--blanco);
     border-radius: 5px;
     padding: 10px 20px;
-    color: black;
+    color: var(--negro);
 }
 
 .flip-back a:hover {
-    background-color: #d4af37;
-    color: white;
-    box-shadow: 0px 0px 10px 1px black;
+    background-color: var(--amarillo);
+    color: var(--blanco);
+    box-shadow: 0px 0px 10px 1px var(--negro);
 }
 
 .flip-card:hover .flip-back,
@@ -247,16 +372,259 @@ form {
 form input, form textarea {
     width: 300px;
     padding: 10px;
-    border: 1px solid #d4af37;
+    border: 1px solid var(--amarillo);
     border-radius: 5px;
     background-color: transparent;
-    color: #d4af37;
+    color: var(--amarillo);
 }
 
 form textarea {
     height: 150px;
+    resize: none;
 }
 
 form .btn {
     margin-top: 20px;
+}
+
+/*Página de Detalles de Hoteles*/
+.encabezado {
+    background-color: var(--negro);
+    color: var(--amarillo);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--amarillo);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hotel-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--amarillo);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: var(--blanco);
+    border-bottom: 1px solid var(--amarillo);
+    padding-bottom: 5px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services li {
+    background-color: var(--negro);
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+}
+
+.rating {
+    font-size: 1.2em;
+    color: var(--amarillo);
+}
+
+.comments {
+    background-color: var(--negro);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--amarillo);
+}
+
+.comment {
+    margin-bottom: 15px;
+}
+
+.comment strong {
+    color: var(--blanco);
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 2px solid var(--amarillo);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--negro);
+    color: var(--amarillo);
+    border: 1px solid var(--amarillo);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+
+p {
+    color: var(--blanco);
+}
+
+
+/* Búsqueda de Servicios */
+.hoteles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.hotel {
+    background-color: var(--negro);
+    border: 1px solid var(--amarillo);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: var(--amarillo);
+}
+
+.hotel img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hotel h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.hotel p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: var(--negro);
+    color: var(--amarillo);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--amarillo);
+}
+
+.lista-servicios {
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item-servicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris1);
+  color: var(--blanco);
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.item-servicio:hover {
+  background-color: var(--gris4);
+}
+
+.nombre-servicio {
+  font-size: 16px;
+}
+
+.cantidad-servicio {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--blanco);
+}
+
+.indice-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.indice-servicios a {
+  background: #444;
+  color: var(--blanco);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.bloque-letra {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--gris1);
+  border-radius: 6px;
+}
+
+.bloque-letra h2 {
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.bloque-letra ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bloque-letra li {
+  margin: 0.5rem 0;
+}
+
+.bloque-letra a {
+  text-decoration: none;
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gris3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.bloque-letra a:hover, .indice-servicios a:hover{
+    background-color: var(--gris4);
 }

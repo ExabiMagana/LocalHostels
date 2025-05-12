@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel de Lujo</title>
+    <title>LocalHostels - Inicio</title>
     <link rel="stylesheet" href="../estilos/style.css">
+    <script src="../javascript/inicio.js" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="logo"><img src="../recursos/imagenes/LocalHostelsLogoSimplificado.png" alt="LOCAL HOSTELS" title="LOCAL HOSTELS"></div>
         <nav class="nav">
-            <a href="#">Inicio</a>
-            <a href="#">Habitaciones</a>
-            <a href="#">Servicios</a>
-            <a href="#">Reservaciones</a>
-            <a href="#">Contacto</a>
+            <a href="inicio.html">Inicio</a>
+            <a href="todos.html">Hoteles y Hostales</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contactos.html">Contacto</a>
         </nav>
     </header>
+    <button class="float" onclick="document.body.classList.toggle('light');">☀</button>
     <section class="hero">
         <h1>LOCAL HOSTELS</h1>
-        <p>Conoce los hoteles y hostales más populares de la zona occidental de El Salvador y facilitaa tu elección al momento de viajar.</p>
+        <p>Conoce los hoteles y hostales más populares de la zona occidental de El Salvador y facilita tu elección al momento de viajar.</p>
         <div class="botones">
-            <button class="btn">Me siento con suerte</button>
+            <button class="btn" onclick="paginaAleatoria();">Me siento con suerte</button>
             <div>
-                <input type="search" name="busqueda" id="busqueda">
-                <button>🕵️</button>
+                <input type="search" name="busqueda" id="busqueda" placeholder="Buscar Hospedaje o Ciudad">
+                <button onclick="buscarHospedaje();">🕵️</button>
             </div>
         </div>
     </section>
+    <a name="ciudades"></a>
     <section class="tarjetas">
         <h2>CIUDADES</h2>
         <div class="cards">
@@ -39,8 +41,8 @@
                     </div>
                     <div class="flip-back">
                         <h3>SANTA ANA</h3>
-                        <p>Un estilo puro, íntegro en pretendidas estancias cómodas.</p>
-                        <a href="#">Ver más</a>
+                        <p>Santa Ana ofrece destinos turísticos que combinan naturaleza y cultura.</p>
+                        <a href="CiudadSantaAna.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">
@@ -55,8 +57,8 @@
                     </div>
                     <div class="flip-back">
                         <h3>SONSONATE</h3>
-                        <p>Hasta el más pequeño detalle pensado para su descanso.</p>
-                        <a href="#">Ver más</a>
+                        <p>Sonsonate conocido por belleza natural, playas, montañas y cultura. </p>
+                        <a href="CiudadSonsonate.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">
@@ -71,8 +73,8 @@
                     </div>
                     <div class="flip-back">
                         <h3>AHUACHAPAN</h3>
-                        <p>Máximo confort y exclusividad en cada rincón.</p>
-                        <a href="#">Ver más</a>
+                        <p>Ahuachapán es un destino lleno de tradición y belleza natural.</p>
+                        <a href="CiudadAhuachapan.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">
@@ -81,16 +83,64 @@
             </div>
         </div>        
     </section>
-
-    <section class="contacto">
-        <h2>CONTACTO</h2>
-        <form>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo Electrónico">
-            <textarea placeholder="Mensaje"></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+    <br><br>
+    <hr>
+    <a name="lugaresTop"></a>
+    <section class="tarjetas">
+        <h2>POPULARES 🔥</h2>
+        <div class="cards">
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <img src="../recursos/imagenes/img_sonsonate/presentacion_marsella.jpg" alt="Sonsonate">
+                        <div class="overlay-text">SONSONATE</div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Hotel Marsella</h3>
+                        <p>Un estilo puro, íntegro en pretendidas estancias cómodas.</p>
+                        <a href="Marsella.html">Ver más</a>
+                    </div>
+                </div>
+                <div class="flip-text">
+                    <p>Hotel Marsella</p>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <img src="../recursos/imagenes/img_sonsonate/comfortable_presentacion.jpg" alt="Sonsonate">
+                        <div class="overlay-text">SONSONATE</div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>La Casa Del Pinito</h3>
+                        <p>Un estilo puro, íntegro en pretendidas estancias cómodas.</p>
+                        <a href="La_Casa_Del_Pinito.html">Ver más</a>
+                    </div>
+                </div>
+                <div class="flip-text">
+                    <p>Comfortable and roomy</p>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <img src="../recursos/imagenes/img_sonsonate/lali_presentacion.jpg" alt="Sonsonate">
+                        <div class="overlay-text">SONSONATE</div>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Lali Beach Hotel Boutique</h3>
+                        <p>Máximo confort y exclusividad en cada rincón.</p>
+                        <a href="Lali_Beach_Hotel_Boutique.html">Ver más</a>
+                    </div>
+                </div>
+                <div class="flip-text">
+                    <p>Lali Beach Hotel Boutique</p>
+                </div>
+            </div>
+        </div>         
     </section>
-
+    <footer>
+        <p>&copy; 2025 LocalHostels</p>
+    </footer>
 </body>
 </html>
