@@ -1,4 +1,14 @@
-const paginas = ["La_Casa_Del_Pinito.html","Lali_Beach_Hotel_Boutique.html","Marsella.html"];
+const paginas = [
+    "hoteles/La_Casa_Del_Pinito.html",
+    "hoteles/Lali_Beach_Hotel_Boutique.html",
+    "hoteles/Marsella.html",
+    "hoteles/Casa_1800_Cerro_Verde.html",
+    "hoteles/La_Casa_de_Miapan.html",
+    "hoteles/Hotel_Tolteka_Plaza.html",
+    "hoteles/Hostal_Sunset_Town.html",
+    "hoteles/Hostal_Casa_Verde.html",
+    "hoteles/El_Cairo_Ruta_de_las_Flores.html"
+];
 
 // Función para abrir una página aleatoria
 function paginaAleatoria() {
@@ -32,13 +42,19 @@ document.addEventListener('click', function () {
 
 //Para la búsqueda
 const hospedajes = {
-    "la casa del pinito": "La_Casa_Del_Pinito.html",
-    "lali beach hotel boutique": "Lali_Beach_Hotel_Boutique.html",
-    "marsella": "Marsella.html",
-    "santa ana": "CiudadSantaAna.html",
-    "sonsonate": "CiudadSonsonate.html",
-    "ahuachapán": "CiudadAhuachapan.html",
-    "ahuachapan": "CiudadAhuachapan.html"
+    "la casa del pinito": "hoteles/La_Casa_Del_Pinito.html",
+    "lali beach hotel boutique": "hoteles/Lali_Beach_Hotel_Boutique.html",
+    "marsella": "hoteles/Marsella.html",
+    "casa 1800 cerro verde": "hoteles/Casa_1800_Cerro_Verde.html",
+    "la casa de mamapan": "hoteles/La_Casa_de_Miapan.html",
+    "hotel tolteka plaza": "hoteles/Hotel_Tolteka_Plaza.html",
+    "hostal sunset town": "hoteles/Hostal_Sunset_Town.html",
+    "hostal casa verde": "hoteles/Hostal_Casa_Verde.html",
+    "el cairo ruta de las flores": "hoteles/El_Cairo_Ruta_de_las_Flores.html",
+    "santa ana": "ciudades/CiudadSantaAna.html",
+    "sonsonate": "ciudades/CiudadSonsonate.html",
+    "ahuachapán": "ciudades/CiudadAhuachapan.html",
+    "ahuachapan": "ciudades/CiudadAhuachapan.html"
 };
 
 function buscarHospedaje() {
@@ -74,4 +90,21 @@ document.getElementById("busqueda").addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         buscarHospedaje();
     }
+});
+
+function marcarActivo(a){
+    var bloques = document.querySelectorAll(".bloque-letra");
+    bloques.forEach(b => b.classList.remove("activo"));
+
+    var marcador = document.getElementById(a);
+    marcador.classList.add("activo");
+}
+
+
+/*Para el menú*/
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
+
+toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });

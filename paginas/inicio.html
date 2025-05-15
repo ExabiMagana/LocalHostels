@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalHostels - Inicio</title>
     <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="icon" href="../recursos/imagenes/FavIcon.ico">
     <script src="../javascript/inicio.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <div class="logo"><img src="../recursos/imagenes/LocalHostelsLogoSimplificado.png" alt="LOCAL HOSTELS" title="LOCAL HOSTELS"></div>
-        <nav class="nav">
+        <div class="logo">
+            <img src="../recursos/imagenes/LocalHostelsLogoSimplificado.png" alt="LOCAL HOSTELS" title="LOCAL HOSTELS">
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+        <nav class="nav" id="nav">
             <a href="inicio.html">Inicio</a>
             <a href="todos.html">Hoteles y Hostales</a>
             <a href="servicios.html">Servicios</a>
             <a href="contactos.html">Contacto</a>
         </nav>
-    </header>
+        </header>
     <button class="float" onclick="document.body.classList.toggle('light');">☀</button>
     <section class="hero">
         <h1>LOCAL HOSTELS</h1>
@@ -42,7 +48,7 @@
                     <div class="flip-back">
                         <h3>SANTA ANA</h3>
                         <p>Santa Ana ofrece destinos turísticos que combinan naturaleza y cultura.</p>
-                        <a href="CiudadSantaAna.html">Ver más</a>
+                        <a href="ciudades/CiudadSantaAna.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">
@@ -58,7 +64,7 @@
                     <div class="flip-back">
                         <h3>SONSONATE</h3>
                         <p>Sonsonate conocido por belleza natural, playas, montañas y cultura. </p>
-                        <a href="CiudadSonsonate.html">Ver más</a>
+                        <a href="ciudades/CiudadSonsonate.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">
@@ -74,7 +80,7 @@
                     <div class="flip-back">
                         <h3>AHUACHAPAN</h3>
                         <p>Ahuachapán es un destino lleno de tradición y belleza natural.</p>
-                        <a href="CiudadAhuachapan.html">Ver más</a>
+                        <a href="ciudades/CiudadAhuachapan.html">Ver más</a>
                     </div>
                 </div>
                 <div class="flip-text">

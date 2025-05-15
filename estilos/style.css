@@ -62,7 +62,12 @@ body {
 }
 .light h1, .light h2, .light h3, .light h4, .light h5, .light h6{
     color: var(--verde);
+    text-shadow: 1px 1px 1px var(--negro);
 }
+.light h2 span{
+    color: var(--amarillo);
+}
+
 .light header, .light footer, .light .flip-text, .light hr, .light .encabezado{
     background: var(--azul);
     border-color: var(--verde);
@@ -98,6 +103,11 @@ body {
     background: var(--azul);
     color: var(--verde);
     border-color: var(--verde);
+}
+.light .services ul li:hover{
+    background: var(--verde);
+    color: var(--azul);
+    border-color: var(--azul);
 }
 .light .gallery img, .light .map{
     border-color: var(--verde);
@@ -147,6 +157,15 @@ body {
     max-width: 150px;
     height: auto;
     display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--amarillo);
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -447,6 +466,12 @@ form .btn {
     border-radius: 5px;
 }
 
+.services li:hover {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    cursor: pointer;
+}
+
 .rating {
     font-size: 1.2em;
     color: var(--amarillo);
@@ -498,7 +523,15 @@ p {
 }
 
 
-/* Búsqueda de Servicios */
+h2{
+    text-align: center;
+    text-shadow: 1px 0px 1px var(--blanco);
+}
+
+h2 span{
+    color: var(--verde);
+}
+
 .hoteles {
     display: flex;
     justify-content: space-around;
@@ -627,4 +660,42 @@ footer {
 
 .bloque-letra a:hover, .indice-servicios a:hover{
     background-color: var(--gris4);
+}
+
+.activo {
+    animation: parpadear 2s infinite;
+}
+
+@keyframes parpadear {
+  50% {
+    background-color: var(--gris4);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--negro);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    border-top: 1px solid var(--amarillo);
+  }
+
+  .nav a {
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--amarillo);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+  }
 }
