@@ -18,13 +18,33 @@
         </nav>
     </header>
     <button class="float" onclick="document.body.classList.toggle('light');">☀</button>
-    <section class="contacto">
-        <h2>CONTACTO</h2>
+    <section class="contacto" id="reserva">
+        <h2>Reserva tu estancia</h2>
         <form>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo Electrónico">
-            <textarea placeholder="Mensaje"></textarea>
-            <button type="submit" class="btn">Enviar</button>
+            <input type="text" placeholder="Nombre completo" >
+            <input type="email" placeholder="Correo electrónico" >
+            <input type="tel" placeholder="Teléfono" >
+            <input type="date" placeholder="Fecha de entrada" >
+            <input type="date" placeholder="Fecha de salida" >
+            <input type="number" placeholder="Número de huéspedes" min="1" max="10" >
+
+            <select >
+                <option value="">Tipo de habitación</option>
+                <option value="simple">Simple</option>
+                <option value="doble">Doble</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <select id="metodo_pago" name="metodo_pago">
+                <option value="0">Método de Pago</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+            </select>
+
+            <textarea placeholder="Comentarios o peticiones especiales"></textarea>
+            <button type="submit" class="btn">Reservar ahora</button>
         </form>
     </section>
     <footer>
