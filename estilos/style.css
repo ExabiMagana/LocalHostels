@@ -72,8 +72,13 @@ body {
     background: var(--azul);
     border-color: var(--verde);
 }
+.light .nav {
+    background-color: var(--azul);
+    border-color: var(--verde);
+}
 .light .nav a{
     color: var(--verde);
+    border-color: var(--verde);
 }
 .light .flip-card, .light .hotel, .light .botones div{
     color: var(--verde);
@@ -130,6 +135,10 @@ body {
 .light .bloque-letra a, .light .indice-servicios a{
   background-color: var(--blanco);
   color: var(--negro);
+}
+
+.light .menu-toggle{
+    color: var(--verde);
 }
 
 /* Header */
@@ -388,7 +397,17 @@ form {
     margin-top: 30px;
 }
 
+form div{
+    display: flex;
+    justify-content: space-between;
+}
+
+form div textarea{
+    width: 640px;
+}
+
 form input, form textarea {
+    margin: 10px;
     width: 300px;
     padding: 10px;
     border: 1px solid var(--amarillo);
@@ -478,6 +497,8 @@ form .btn {
 }
 
 .comments {
+    max-height: 227px;
+    overflow-y: auto;
     background-color: var(--negro);
     padding: 15px;
     border-radius: 8px;
@@ -490,6 +511,19 @@ form .btn {
 
 .comment strong {
     color: var(--blanco);
+}
+
+.fecha {
+  color: var(--gris2);
+  font-size: 12px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.hora {
+  color: var(--gris2);
+  font-size: 12px;
+  font-style: italic;
 }
 
 .map {
@@ -667,16 +701,8 @@ footer {
 }
 
 form select {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid var(--amarillo);
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--amarillo);
-}
-
-form select {
-    width: 300px;
+    width: 320px;
+    margin: 10px;
     padding: 10px;
     border: 1px solid var(--amarillo);
     border-radius: 5px;
@@ -726,4 +752,5 @@ form select {
   .nav.active {
     display: flex;
   }
+
 }

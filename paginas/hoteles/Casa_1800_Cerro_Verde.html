@@ -9,12 +9,17 @@
 </head>
 <body>
     <header class="header">
-        <div class="logo"><img src="../../recursos/imagenes/LocalHostelsLogoSimplificado.png" alt="LOCAL HOSTELS" title="LOCAL HOSTELS"></div>
-        <nav class="nav">
+        <div class="logo">
+            <img src="../../recursos/imagenes/LocalHostelsLogoSimplificado.png" alt="LOCAL HOSTELS" title="LOCAL HOSTELS">
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            ☰
+        </button>
+        <nav class="nav" id="nav">
             <a href="../inicio.html">Inicio</a>
             <a href="../todos.html">Hoteles y Hostales</a>
             <a href="../servicios.html">Servicios</a>
-            <a href="../contactos.html">Contacto</a>
+            <a href="../contactos.html">Reserva</a>
         </nav>
     </header>
     <button class="float" onclick="document.body.classList.toggle('light');">☀</button>
@@ -69,27 +74,26 @@
         en el departamento de Santa Ana, El Salvador.</p>
       <iframe 
         class="map"
-        src="https://www.google.com/maps/place/Casa+1800+Cerro+Verde/data=!4m2!3m1!1s0x0:0x2e3f3a0929f526e8?sa=X&ved=1t:2428&ictx=111"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.233320328818!2d-89.62533492328657!3d13.825023595590727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62c35b08fe1383%3A0x2e3f3a0929f526e8!2sCasa%201800%20Cerro%20Verde!5e0!3m2!1ses!2ssv!4v1748764617130!5m2!1ses!2ssv"
         allowfullscreen="" loading="lazy">
       </iframe>
     </div>
 
     <div class="section">
-      <h2>Valoración</h2>
       <p class="rating">★★★☆☆ 8.9/10</p>
     </div>
 
     <div class="section comments">
       <h2>Comentarios</h2>
-      <div class="comment">
-        <strong>Maria M.:</strong> “Las vistas, el restaurante muy bueno, el personal amable!!.”
-      </div>
-      <div class="comment">
-        <strong>Carlos P.:</strong> “Una ubicacion increible frente al volcan.”
-      </div>
-      <div class="comment">
-        <strong>Elena G.:</strong> “Las habitaciones muy bonitas y comodas.”
-      </div>
+      <div id="lista-comentarios"></div>
+    </div>
+    <div class="section">
+        <h2>Escribe tu comentario</h2>
+        <form id="comment-form">
+          <input type="text" id="name" placeholder="Tu nombre" required>
+          <textarea id="message" placeholder="Tu comentario" required></textarea>
+          <button type="submit" class="back-button">Agregar comentario</button>
+      </form>
     </div>
 
     <a href="../inicio.html" class="back-button">← Volver</a>
@@ -98,5 +102,6 @@
   <footer>
     <p>&copy; 2025 LocalHostels</p>
   </footer>
+  <script src="../../javascript/comentarios.js"></script>
 </body>
 </html>
