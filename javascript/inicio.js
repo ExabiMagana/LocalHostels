@@ -99,12 +99,3 @@ function marcarActivo(a){
     var marcador = document.getElementById(a);
     marcador.classList.add("activo");
 }
-
-
-/*Para el menú*/
-const toggle = document.getElementById('menu-toggle');
-const nav = document.getElementById('nav');
-
-toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-});
