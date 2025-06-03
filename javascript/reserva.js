@@ -1,8 +1,10 @@
 function reserva(e) {
     e.preventDefault();
+
+    var formReserva = document.getElementById("ReservaForm");
+
     const modal = document.getElementById("modal");
     const barra = document.getElementById("barraProgreso");
-
     
     modal.showModal();
     barra.value = 0;
@@ -17,7 +19,8 @@ function reserva(e) {
             setTimeout(() => {
                 alert("Reserva completada con éxito");
                 modal.close();
+                formReserva.submit();
             }, 500);
         }
-    }, 500);
+    }, 500); 
 }

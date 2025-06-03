@@ -81,16 +81,22 @@
     </div>
 
     <div class="section">
-      <p class="rating">★★★☆☆ 8.9/10</p>
+      <h2>Valoración</h2>
+      <div class="rating-progress">
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 89%"></div>
+        </div>
+        <span class="progress-rating">8.9/10</span>
+      </div>
     </div>
 
     <div class="section comments">
       <h2>Comentarios</h2>
       <div id="lista-comentarios"></div>
     </div>
-    <div class="section">
+    <div class="section comentarios">
         <h2>Escribe tu comentario</h2>
-        <form id="comment-form">
+        <form id="comment-form" class="reservaForm">
           <input type="text" id="name" placeholder="Tu nombre" required>
           <textarea id="message" placeholder="Tu comentario" required></textarea>
           <button type="submit" class="back-button">Agregar comentario</button>

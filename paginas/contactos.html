@@ -25,42 +25,36 @@
   <button class="float" onclick="document.body.classList.toggle('light');">☀</button>
 
   <section class="hero">
-    <h1>LOCAL HOSTELS</h1>
-    <p>Conoce los hoteles y hostales más populares de la zona occidental de El Salvador y facilita tu elección al momento de viajar.</p>
-    <div class="botones">
-      <button class="btn" onclick="paginaAleatoria();">Me siento con suerte</button>
-      <div>
-        <input type="search" name="busqueda" id="busqueda" placeholder="Buscar Hospedaje o Ciudad" />
-        <button onclick="buscarHospedaje();">🕵️</button>
-      </div>
-    </div>
+    <h1>Reservas</h1>
+    <p>Completa tu información y realiza tu reserva</p>
+    <span style="color: yellowgreen;"><strong>*</strong> Las reservas realizadas en este sitio son simplemente simulaciones.</span>
   </section>
 
   <section class="contacto" id="reserva">
     <h2>Reserva tu estancia</h2>
-    <form class="reservaForm" onsubmit="reserva(event)">
+    <form class="reservaForm" onsubmit="reserva(event)" id="ReservaForm">
       <div>
-        <input type="text" placeholder="Nombre completo" />
-        <input type="email" placeholder="Correo electrónico" />
+        <input type="text" placeholder="Nombre completo"  />
+        <input type="email" placeholder="Correo electrónico"  />
       </div>
       <div>
-        <input type="tel" placeholder="Teléfono" />
-        <input type="number" placeholder="Número de huéspedes" min="1" max="10" />
+        <input type="tel" placeholder="Teléfono"  />
+        <input type="number" placeholder="Número de huéspedes" min="1" max="10"  />
       </div>
       <div>
-        <input type="date" placeholder="Fecha de entrada" />
-        <input type="date" placeholder="Fecha de salida" />
+        <input type="date" placeholder="Fecha de entrada"  />
+        <input type="date" placeholder="Fecha de salida"  />
       </div>
       <div>
-        <select>
+        <select  >
           <option value="">Tipo de habitación</option>
           <option value="simple">Simple</option>
           <option value="doble">Doble</option>
           <option value="suite">Suite</option>
         </select>
 
-        <select id="metodo_pago" name="metodo_pago">
-          <option value="0">Método de Pago</option>
+        <select id="metodo_pago" name="metodo_pago"  >
+          <option value="">Método de Pago</option>
           <option value="efectivo">Efectivo</option>
           <option value="tarjeta">Tarjeta de Crédito</option>
           <option value="paypal">PayPal</option>
@@ -76,7 +70,7 @@
 
   <dialog id="modal">
     <h2>Procesando Reserva</h2>
-    <p>Completando tarea...</p>
+    <p>Esto puede tardar un poco...</p>
     <progress id="barraProgreso" value="0" max="100" style="width:100%;"></progress>
   </dialog>
   <script src="../javascript/reserva.js"></script>

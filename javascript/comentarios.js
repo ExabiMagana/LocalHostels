@@ -1,7 +1,7 @@
 var comentarios = [
   { nombre: "Maria Martínez", mensaje: "Las vistas, el restaurante muy bueno, el personal amable!!.", fecha: "25/3/2025", hora: "10:30:34 a. m." },
-  { nombre: "Carlos Pérez", mensaje: "Una ubicacion increible.", fecha: "26/3/2025", hora: "01:00:23 p. m." },
-  { nombre: "Elena Gutiérrez", mensaje: "Las habitaciones muy bonitas y comodas.", fecha: "27/3/2025", hora: "03:26:56 p. m." }
+  { nombre: "Carlos Pérez", mensaje: "Una ubicacion increible.", fecha: "26/3/2025", hora: "1:00:23 p. m." },
+  { nombre: "Elena Gutiérrez", mensaje: "Las habitaciones muy bonitas y comodas.", fecha: "27/3/2025", hora: "3:26:56 p. m." }
 ];
 
 function renderComentarios() {

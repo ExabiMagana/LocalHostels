@@ -1,6 +1,5 @@
-/*Estas son algo así como variables, están aquí para que no tengan que estar copiando los códigos de color
-para usarlas solo deben escribir var(--nombreVariable)*/
-:root{
+/* ==================== VARIABLES CSS ==================== */
+:root {
     --background-principal: linear-gradient(to bottom, #272727, #0d0d0d, #272727);
     --background-secundario: linear-gradient(to top, #767891, #8096c7);
     --verde: #0fbea1;
@@ -15,7 +14,7 @@ para usarlas solo deben escribir var(--nombreVariable)*/
     --blanco: #fff;
 }
 
-/* General */
+/* ==================== ESTILOS GENERALES ==================== */
 body {
     margin: 0;
     font-family: 'Georgia', serif;
@@ -23,105 +22,117 @@ body {
     color: var(--amarillo);
 }
 
-/*Modo Claro*/
-.float{
-    z-index: 10;
-    position: fixed;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    bottom: 30px;
-    right: 30px;
-    border-radius: 5px;
-    border: 0;
-}
-
-.float:hover{
-    background: var(--negro);
-    border: 1px solid var(--blanco);
+p {
     color: var(--blanco);
 }
 
-.light .float{
-    background: var(--negro);
-    color: var(--blanco);
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 1px 0px 1px var(--blanco);
 }
-.light .float:hover{
-    background: var(--blanco);
-    color: var(--negro);
+
+h2 {
+    text-align: center;
 }
+
+h2 span {
+    color: var(--verde);
+}
+
+/* ==================== MODO CLARO ==================== */
 .light {
     background: var(--background-secundario);
 }
-.light .hotel{
-    background-color: var(--azul);
-    border-color: var(--verde);
-}
-.light .flip-card{
-    background-color: var(--azul)
-}
-.light h1, .light h2, .light h3, .light h4, .light h5, .light h6{
+
+.light h1, 
+.light h2, 
+.light h3, 
+.light h4, 
+.light h5, 
+.light h6 {
     color: var(--verde);
     text-shadow: 1px 1px 1px var(--negro);
 }
-.light h2 span{
+
+.light h2 span {
     color: var(--amarillo);
 }
 
-.light header, .light footer, .light .flip-text, .light hr, .light .encabezado{
+/* Elementos generales */
+.light header, 
+.light footer, 
+.light .flip-text, 
+.light hr, 
+.light .encabezado,
+.light .nav {
     background: var(--azul);
     border-color: var(--verde);
 }
-.light .nav {
+
+.light .nav a {
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+/* Cards y hoteles */
+.light .flip-card,
+.light .hotel {
     background-color: var(--azul);
-    border-color: var(--verde);
-}
-.light .nav a{
     color: var(--verde);
     border-color: var(--verde);
 }
-.light .flip-card, .light .hotel, .light .botones div{
-    color: var(--verde);
-    border-color: var(--verde);
-}
-.light .flip-back a:hover{
+
+.light .flip-back a:hover {
     background: var(--verde);
 }
-.light .btn, .light .botones button, .light .back-button, .light .comments{
+
+/* Botones */
+.light .btn, 
+.light .botones button, 
+.light .back-button, 
+.light .comments {
     background-color: var(--azul);
     color: var(--verde);
     border: 1px solid var(--verde);
 }
-.light .btn:hover, .light .back-button:hover{
+
+.light .btn:hover, 
+.light .back-button:hover {
     background-color: var(--verde);
     border: 1px solid var(--azul);
     color: var(--azul);
-
 }
-.light .botones button:hover{
+
+.light .botones button:hover {
     background-color: var(--verde);
 }
-.light .rating{
-    color: var(--verde);
-}
-.light .services ul li{
+
+/* Servicios */
+.light .services ul li {
     background: var(--azul);
     color: var(--verde);
     border-color: var(--verde);
 }
-.light .services ul li:hover{
+
+.light .services ul li:hover {
     background: var(--verde);
     color: var(--azul);
     border-color: var(--azul);
 }
-.light .gallery img, .light .map{
+
+/* Galería y mapa */
+.light .gallery img, 
+.light .map {
     border-color: var(--verde);
     color: var(--verde);
 }
-.light form input, .light form textarea{
+
+/* Formularios */
+.light form input, 
+.light form textarea,
+.light form select {
     border-color: var(--azul);
     color: var(--azul);
-} 
+}
 
 .light form input::placeholder,
 .light form textarea::placeholder {
@@ -129,19 +140,20 @@ body {
 }
 
 .light .bloque-letra {
-  background-color: var(--gris2);
+    background-color: var(--gris2);
 }
 
-.light .bloque-letra a, .light .indice-servicios a{
-  background-color: var(--blanco);
-  color: var(--negro);
+.light .bloque-letra a, 
+.light .indice-servicios a {
+    background-color: var(--blanco);
+    color: var(--negro);
 }
 
-.light .menu-toggle{
+.light .menu-toggle {
     color: var(--verde);
 }
 
-/* Header */
+/* ==================== HEADER Y NAVEGACIÓN ==================== */
 .header {
     display: flex;
     justify-content: space-between;
@@ -149,6 +161,12 @@ body {
     padding: 5px 50px;
     background-color: var(--negro);
     border-bottom: 1px solid var(--amarillo);
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
 }
 
 .nav a {
@@ -162,12 +180,6 @@ body {
     color: var(--blanco);
 }
 
-.logo img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-}
-
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -177,7 +189,7 @@ body {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* ==================== HERO SECTION ==================== */
 .hero {
     background: url('../recursos/imagenes/portadaHotel.jpg') no-repeat center center/cover;
     background-color: var(--gris1);
@@ -196,9 +208,9 @@ body {
     margin: 20px 0;
 }
 
-.btn {
+/* ==================== BOTONES ==================== */
+.btn, .back-button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 30px;
     color: var(--amarillo);
     background-color: var(--negro);
@@ -206,12 +218,14 @@ body {
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
-.btn:hover {
+.btn:hover, .back-button:hover {
     background-color: var(--amarillo);
     color: var(--negro);
 }
+
 .botones {
     margin-top: 30px;
     display: flex;
@@ -256,15 +270,66 @@ body {
     color: var(--blanco);
 }
 
-/* Targetas */
-hr{
-    margin: 20px 0 40px 0;
-    background-color: var(--amarillo);
-    opacity: 40%;
-    border: 0;
-    height: 50px;
+/* ==================== FORMULARIO RESPONSIVE ==================== */
+.contacto {
+    padding: 40px 20px;
 }
 
+.reservaForm {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reservaForm div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.reservaForm input,
+.reservaForm select,
+.reservaForm textarea {
+    flex: 1 1 300px;
+    min-width: 0;
+    margin: 0;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--amarillo);
+}
+
+.reservaForm textarea {
+    flex-basis: 100%;
+    min-height: 120px;
+}
+
+.reservaForm button[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    padding: 12px;
+    font-size: 18px;
+}
+
+progress {
+    height: 16px;
+    border-radius: 8px;
+}
+
+dialog {
+    background-color: var(--gris1);
+    color: var(--amarillo2);
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 10px white;
+}
+
+/* ==================== CARDS Y FLIP CARDS ==================== */
 .cards {
     display: flex;
     justify-content: center;
@@ -274,7 +339,7 @@ hr{
     flex-wrap: wrap;
 }
 
-.tarjetas h2{
+.tarjetas h2 {
     width: 100%;
     text-align: center;
 }
@@ -317,6 +382,7 @@ hr{
     color: var(--blanco);
     pointer-events: none;
 }
+
 .overlay-text {
     position: absolute;
     top: 10px;
@@ -365,67 +431,38 @@ hr{
     opacity: 99%;
 }
 
-/* Servicios */
-.servicios {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.iconos {
+/* ==================== HOTELES Y DETALLES ==================== */
+.hoteles {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
     margin-top: 40px;
+    padding: 0 20px;
 }
 
-.icono img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-/* Contacto */
-.contacto {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-form div{
-    display: flex;
-    justify-content: space-between;
-}
-
-form div textarea{
-    width: 640px;
-}
-
-form input, form textarea {
-    margin: 10px;
-    width: 300px;
-    padding: 10px;
+.hotel {
+    background-color: var(--negro);
     border: 1px solid var(--amarillo);
-    border-radius: 5px;
-    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
     color: var(--amarillo);
 }
 
-form textarea {
-    height: 150px;
-    resize: none;
+.hotel img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
-form .btn {
-    margin-top: 20px;
+.hotel h3 {
+    font-size: 24px;
+    margin: 15px 0;
 }
 
-/*Página de Detalles de Hoteles*/
+/* Detalles de hoteles */
 .encabezado {
     background-color: var(--negro);
     color: var(--amarillo);
@@ -470,30 +507,32 @@ form .btn {
     padding-bottom: 5px;
 }
 
-.services ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+.rating-progress {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.services li {
-    background-color: var(--negro);
-    padding: 8px 12px;
-    margin: 5px;
-    border: 1px solid var(--amarillo);
-    border-radius: 5px;
+.progress-container {
+  flex-grow: 1;
+  height: 8px;
+  background: var(--gris3);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.services li:hover {
-    background-color: var(--amarillo);
-    color: var(--negro);
-    cursor: pointer;
+.progress-bar {
+  height: 100%;
+  background: var(--amarillo);
+  border-radius: 4px;
+  transition: width 0.5s ease;
 }
 
-.rating {
-    font-size: 1.2em;
-    color: var(--amarillo);
+.progress-rating {
+  font-weight: bold;
+  color: var(--amarillo);
+  min-width: 60px;
+  text-align: right;
 }
 
 .comments {
@@ -514,16 +553,16 @@ form .btn {
 }
 
 .fecha {
-  color: var(--gris2);
-  font-size: 12px;
-  margin-right: 8px;
-  font-weight: bold;
+    color: var(--gris2);
+    font-size: 12px;
+    margin-right: 8px;
+    font-weight: bold;
 }
 
 .hora {
-  color: var(--gris2);
-  font-size: 12px;
-  font-style: italic;
+    color: var(--gris2);
+    font-size: 12px;
+    font-style: italic;
 }
 
 .map {
@@ -535,71 +574,164 @@ form .btn {
     border: 2px solid var(--amarillo);
 }
 
-.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--negro);
-    color: var(--amarillo);
-    border: 1px solid var(--amarillo);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
+/* Formulario de comentarios - versión específica */
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.back-button:hover {
+#comment-form input,
+#comment-form textarea {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--amarillo);
+}
+
+#comment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#comment-form button {
+    align-self: center;
+    padding: 12px 30px;
+}
+
+/* Modo claro */
+.light #comment-form input,
+.light #comment-form textarea {
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+/* ==================== SERVICIOS ==================== */
+.servicios {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.iconos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.icono img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services li, .item-servicio {
+    background-color: var(--negro);
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid var(--amarillo);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.services li:hover, .item-servicio:hover {
     background-color: var(--amarillo);
     color: var(--negro);
+    cursor: pointer;
 }
 
-p {
+.lista-servicios {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.item-servicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris1);
     color: var(--blanco);
 }
 
-
-h2{
-    text-align: center;
-    text-shadow: 1px 0px 1px var(--blanco);
-}
-
-h2 span{
-    color: var(--verde);
-}
-
-.hoteles {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 0 20px;
-}
-
-.hotel {
-    background-color: var(--negro);
-    border: 1px solid var(--amarillo);
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    color: var(--amarillo);
-}
-
-.hotel img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.hotel h3 {
-    font-size: 24px;
-    margin: 15px 0;
-}
-
-.hotel p {
+.nombre-servicio {
     font-size: 16px;
 }
 
+.cantidad-servicio {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--blanco);
+}
+
+.indice-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.indice-servicios a {
+    background: #444;
+    color: var(--blanco);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.bloque-letra {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: var(--gris1);
+    border-radius: 6px;
+}
+
+.bloque-letra h2 {
+    margin-top: 0;
+    color: #ffcc00;
+}
+
+.bloque-letra ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bloque-letra li {
+    margin: 0.5rem 0;
+}
+
+.bloque-letra a {
+    text-decoration: none;
+    color: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gris3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.bloque-letra a:hover, 
+.indice-servicios a:hover {
+    background-color: var(--gris4);
+}
+
+/* ==================== FOOTER ==================== */
 footer {
     background-color: var(--negro);
     color: var(--amarillo);
@@ -609,148 +741,104 @@ footer {
     border-top: 1px solid var(--amarillo);
 }
 
-.lista-servicios {
-  max-width: 1200px;
-  margin: 20px auto;
-  font-family: sans-serif;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+/* ==================== ELEMENTOS FLOTANTES ==================== */
+.float {
+    z-index: 10;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 5px;
+    border: 0;
 }
 
-.item-servicio {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--gris1);
-  color: var(--blanco);
-  padding: 10px 15px;
-  margin-bottom: 8px;
-  border-radius: 5px;
-  transition: background 0.2s;
+.float:hover {
+    background: var(--negro);
+    border: 1px solid var(--blanco);
+    color: var(--blanco);
 }
 
-.item-servicio:hover {
-  background-color: var(--gris4);
+.light .float {
+    background: var(--negro);
+    color: var(--blanco);
 }
 
-.nombre-servicio {
-  font-size: 16px;
+.light .float:hover {
+    background: var(--blanco);
+    color: var(--negro);
 }
 
-.cantidad-servicio {
-  font-weight: bold;
-  font-size: 14px;
-  color: var(--blanco);
-}
-
-.indice-servicios {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.indice-servicios a {
-  background: #444;
-  color: var(--blanco);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.bloque-letra {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: var(--gris1);
-  border-radius: 6px;
-}
-
-.bloque-letra h2 {
-  margin-top: 0;
-  color: #ffcc00;
-}
-
-.bloque-letra ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.bloque-letra li {
-  margin: 0.5rem 0;
-}
-
-.bloque-letra a {
-  text-decoration: none;
-  color: var(--blanco);
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--gris3);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-}
-
-.bloque-letra a:hover, .indice-servicios a:hover{
-    background-color: var(--gris4);
-}
-
+/* ==================== ANIMACIONES ==================== */
 .activo {
     animation: parpadear 2s infinite;
 }
 
-form select {
-    width: 320px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid var(--amarillo);
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--amarillo);
-}
-
-.light form select {
-    border-color: var(--azul);
-    color: var(--azul);
-}
-
-.light form select option {
-    color: var(--azul);
-    background-color: var(--blanco);
-}
-
 @keyframes parpadear {
-  50% {
-    background-color: var(--gris4);
-  }
+    50% {
+        background-color: var(--gris4);
+    }
 }
 
+/* ==================== MEDIA QUERIES ==================== */
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: var(--negro);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    border-top: 1px solid var(--amarillo);
-  }
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--negro);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        border-top: 1px solid var(--amarillo);
+    }
 
-  .nav a {
-    margin: 15px 0;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid var(--amarillo);
-  }
+    .nav a {
+        margin: 15px 0;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid var(--amarillo);
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block;
+    }
 
-  .nav.active {
-    display: flex;
-  }
+    .nav.active {
+        display: flex;
+    }
 
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .botones > div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .reservaForm div {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .reservaForm input,
+    .reservaForm select {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
 }
