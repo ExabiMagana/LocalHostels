@@ -326,7 +326,7 @@ dialog {
     color: var(--amarillo2);
     border: 0px;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 10px white;
+    box-shadow: 1px 1px 1px 10px var(--blanco);
 }
 
 /* ==================== CARDS Y FLIP CARDS ==================== */

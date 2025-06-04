@@ -34,26 +34,26 @@
     <h2>Reserva tu estancia</h2>
     <form class="reservaForm" onsubmit="reserva(event)" id="ReservaForm">
       <div>
-        <input type="text" placeholder="Nombre completo"  />
-        <input type="email" placeholder="Correo electrónico"  />
+        <input type="text" placeholder="Nombre completo" required/>
+        <input type="email" placeholder="Correo electrónico" required/>
       </div>
       <div>
-        <input type="tel" placeholder="Teléfono"  />
-        <input type="number" placeholder="Número de huéspedes" min="1" max="10"  />
+        <input type="tel" placeholder="Teléfono" required/>
+        <input type="number" placeholder="Número de huéspedes" min="1" max="10"  required/>
       </div>
       <div>
-        <input type="date" placeholder="Fecha de entrada"  />
-        <input type="date" placeholder="Fecha de salida"  />
+        <input type="date" placeholder="Fecha de entrada" required/>
+        <input type="date" placeholder="Fecha de salida" required/>
       </div>
       <div>
-        <select  >
+        <select required>
           <option value="">Tipo de habitación</option>
           <option value="simple">Simple</option>
           <option value="doble">Doble</option>
           <option value="suite">Suite</option>
         </select>
 
-        <select id="metodo_pago" name="metodo_pago"  >
+        <select id="metodo_pago" name="metodo_pago" required>
           <option value="">Método de Pago</option>
           <option value="efectivo">Efectivo</option>
           <option value="tarjeta">Tarjeta de Crédito</option>
@@ -73,6 +73,7 @@
     <p>Esto puede tardar un poco...</p>
     <progress id="barraProgreso" value="0" max="100" style="width:100%;"></progress>
   </dialog>
+  
   <script src="../javascript/reserva.js"></script>
   <footer>
     <p>&copy; 2025 LocalHostels</p>
