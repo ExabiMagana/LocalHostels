@@ -770,6 +770,61 @@ footer {
     color: var(--negro);
 }
 
+/* =================== MAPA DE SITIO =======================*/
+.mapaSitio {
+    background: var(--gris1);
+    color: var(--blanco);
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.mapaSitio::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.mapaSitio h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: var(--amarillo);
+    text-shadow: 1px 1px 1px var(--negro);
+}
+
+.mapaSitio > button[aria-label="Cerrar mapa del sitio"] {
+    background: none;
+    color: var(--gris2);
+    font-size: 40px;
+    float: right;
+    border: none;
+    cursor: pointer;
+}
+
+.mapaSitio summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 4px 0;
+    color: var(--amarillo2);
+}
+
+.mapaSitio details > div span {
+    color: var(--gris2);
+}
+
+.mapaSitio span {
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.btn-mapa {
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    bottom: 80px;
+}
+
 /* ==================== ANIMACIONES ==================== */
 .activo {
     animation: parpadear 2s infinite;

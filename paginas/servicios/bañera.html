@@ -36,7 +36,45 @@
     <h2>Con este servicio: <span></span></h2>
     <div class="hoteles">
     </div>
+    <article class="MapaDelSitio">
+        <button onclick="document.getElementById('mapaSitio').showModal();" title="Ver mapa del sitio" class="float btn-mapa">&#x2316;</button>
+        <dialog class="mapaSitio" id="mapaSitio">
+            <button onclick="document.getElementById('mapaSitio').close();" aria-label="Cerrar mapa del sitio">&times;</button>
+            <h2>Mapa Visual del Sitio</h2>
+            <div>
+                <details open>
+                    <summary><span>Inicio</span></summary>
 
+                    <details open>
+                        <summary><span>Ciudades</span></summary>
+                        <div>&emsp;<span>Ciudad Ahuachapan</span></div>
+                        <div>&emsp;<span>Ciudad Santa Ana</span></div>
+                        <div>&emsp;<span>Ciudad Sonsonate</span></div>
+                    </details>
+
+                    <details open>
+                        <summary><span>Hoteles y Hostales</span></summary>
+                        <div>&emsp;<span>Casa 1800 Cerro Verde</span></div>
+                        <div>&emsp;<span>El Cairo Ruta de las Flores</span></div>
+                        <div>&emsp;<span>...</span></div>
+                        <div>&emsp;<span>Lali Beach Hotel</span></div>
+                        <div>&emsp;<span>Marsella</span></div>
+                    </details>
+
+                    <details open>
+                        <summary><span>Servicios</span></summary>
+                        <div>&emsp;<span>Adaptado personas de movilidad reducida</span></div>
+                        <div>&emsp;<span>Aire acondicionado</span></div>
+                        <div>&emsp;<span>...</span></div>
+                        <div>&emsp;<span>Traslado al aeropuerto</span></div>
+                        <div>&emsp;<span>WiFi gratis</span></div>
+                    </details>
+
+                    <summary><span>Reserva</span></summary>
+                </details>
+            </div>
+        </dialog>
+    </article>
     <footer>
         <p>&copy; 2025 LocalHostels</p>
     </footer>

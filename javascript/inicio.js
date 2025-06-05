@@ -14,10 +14,10 @@ const paginas = [
 function paginaAleatoria() {
     const indice = Math.floor(Math.random() * paginas.length);
     const paginaSeleccionada = paginas[indice];
-    window.location.href = paginaSeleccionada; // Redirecciona a la página
+    window.location.href = paginaSeleccionada;
 }
 
-// Activar tarjetas en pantallas táctiles
+// Activar tarjetas
 document.querySelectorAll('.flip-card').forEach(card => {
     card.addEventListener('click', function (e) {
         // Cierra otras tarjetas activas
@@ -26,7 +26,6 @@ document.querySelectorAll('.flip-card').forEach(card => {
                 activeCard.classList.remove('active');
             }
         });
-        // Alterna la clase en la tarjeta actual
         this.classList.toggle('active');
         e.stopPropagation();
     });
@@ -38,7 +37,6 @@ document.addEventListener('click', function () {
         card.classList.remove('active');
     });
 });
-
 
 //Para la búsqueda
 const hospedajes = {
@@ -98,4 +96,4 @@ function marcarActivo(a){
 
     var marcador = document.getElementById(a);
     marcador.classList.add("activo");
-}
+}   
